@@ -1,0 +1,69 @@
+site_name: genteki
+site_url: https://genteki.org
+# nav:
+#   - Home: index.md
+#   - About: about.md
+docs_dir: src
+site_description: 'Genteki Personal Website'
+theme:
+  name: material
+  palette:
+    - scheme: cpalgo
+      primary: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate 
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - toc.integrate
+    - search.suggest
+    - content.code.copy
+extra_css:
+  - stylesheets/extra.css
+
+
+repo_url: https://github.com/genteki/genteki.github.io
+repo_name: genteki/genteki.github.io
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+      tex_inline_wrap: ['$', '$']
+      tex_block_wrap: ['$$', '$$']
+  - pymdownx.highlight
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji 
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - meta
+  - toc:
+      permalink: true
+plugins:
+  - mkdocs-simple-hooks:
+      hooks:
+          on_env: "hooks:on_env"
+  - search
+  # - tags:
+  #     tags_file: tags.md
+  - literate-nav:
+      nav_file: navigation.md
+  # - git-revision-date-localized:
+  #     enable_creation_date: true
+  #     enabled: !ENV [MKDOCS_ENABLE_GIT_REVISION_DATE, False]
+  - git-authors
+  # - git-committers:
+  #     repository: cp-algorithms/cp-algorithms
+  #     docs_path: src/
+  #     token: !ENV MKDOCS_GIT_COMMITTERS_APIKEY
+  #     enabled: !ENV [MKDOCS_ENABLE_GIT_COMMITTERS, False]
+  - macros
+  - rss
