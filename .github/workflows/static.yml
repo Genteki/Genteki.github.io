@@ -41,7 +41,10 @@ jobs:
       - name: Build
         run: mkdocs build
       - name: deploy
-        run: mkdocs gh-deploy --force
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site  # Change to `./build` if that's your output directory
       # - name: Setup Pages
       #   uses: actions/configure-pages@v5
       # - name: Upload artifact
