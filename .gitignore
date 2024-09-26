@@ -12,3 +12,5 @@ firebase-debug.log
 authors.json
 .venv/
 build/*
+__pycache__
+.cache/
