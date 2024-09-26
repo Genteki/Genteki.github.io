@@ -1,10 +1,10 @@
-site_name: genteki
+site_name: It's Genteki ʕ •ᴥ•ʔゝ
 site_url: https://genteki.org
 # nav:
 #   - Home: index.md
 #   - About: about.md
 docs_dir: src
-site_description: 'Genteki Personal Website'
+site_description: Genteki Personal Website
 theme:
   name: material
   palette:
