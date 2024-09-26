@@ -4,6 +4,7 @@ site_url: https://genteki.org
 #   - Home: index.md
 #   - About: about.md
 docs_dir: src
+site_dir: build
 site_description: Genteki Personal Website
 theme:
   name: material
